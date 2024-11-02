@@ -43,7 +43,7 @@ public class Student extends Person implements Serializable {
 
     @Override
     public String toString() {
-        return super.toString() + " Student{" +
+        return super.toString() + Student.student + " Student{" +
                 "faculty='" + faculty + '\'' +
                 ", login='" + login + '\'' +
                 ", password='" + password + '\'' +

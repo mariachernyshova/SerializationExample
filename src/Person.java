@@ -8,11 +8,15 @@ public class Person {
     // (можно его не писать, если нет других конструкторов, так как он присутствует неявно)
     public Person() {
         this.age = 5;
+
+        System.out.println("empty constructor person");
     }
 
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
+
+        System.out.println("constructor person");
     }
 
     public String getName() {
@@ -33,7 +37,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
+        return Person.person + " Person{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
