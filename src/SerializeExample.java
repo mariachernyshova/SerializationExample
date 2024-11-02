@@ -10,11 +10,15 @@ public class SerializeExample {
         objectOutputStream.writeObject(student);
 
         fileOutputStream.close();
+        objectOutputStream.flush();
         objectOutputStream.close();
 
         FileInputStream fileInputStream = new FileInputStream("test.txt");
         ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
         Student studentAfterSerialize = (Student) objectInputStream.readObject();
         System.out.println("после десериализации: " + studentAfterSerialize);
+
+        fileInputStream.close();
+        objectInputStream.close();
     }
 }
